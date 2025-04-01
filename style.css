@@ -1,0 +1,24 @@
+.flex-container {
+    display: flex;
+    height:100vh;
+  }
+  
+  /* this selector selects all divs inside of .flex-container */
+  .flex-container div {
+    border: 4px solid red;
+    flex:1;
+  }
+
+  .flex-container .odin-image {
+    background-image: url("green_leaf_plant.png");
+    background-size: contain;
+  }
+  
+  .flex-container .signup {
+    flex:2;
+  }
+
+  .intro {
+    padding: 25px;
+    margin: 100px 25px 25px 25px;
+  }
