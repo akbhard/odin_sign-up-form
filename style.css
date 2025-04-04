@@ -1,48 +1,105 @@
-/* Adds a red border on all divs/containers in the file */
-  * {
-    border: 1px solid red; 
-  }
+/* Applies a red border on all elements so I can vizualize the flexbox better. Also reduces margin to 0 so there is no white space */
+* {
+  /* border: 1px solid red; */
+  margin: 0;
+}
 
-/* Reduces the border so the entire HTML fills up the page */
-  body {
-    margin: 0;
-  }
+/* Container for all the elements of the page. Height is set to 100 viewheight in order to fill up the initial browser page */
+.container {
+  display:flex;
+  height: 100vh;
+}
 
-/* Creates a flex container for the overall page to hold section 1 and section 2 */
-  .flex-container {
-    display: flex;
-    height:100vh;
-  }
+/* Odin section of the page. This will contain the logo, and the word 'Odin' */
+.odin-section {
+  display: flex;
+  flex: 1;
+  background-image: url(green_leaf_plant.png);
+  background-size: contain;
 
-/* All the CSS for the first section, which holds the background image, odin logo, and Odin */
-  .flex-container .odin-image {
-    flex:1;
-    background-image: url("green_leaf_plant.png");
-    background-size: contain;
-    padding-top: 200px;
-  }
+}
+/* Adding in the norse font using the font-face property */
+@font-face {
+  font-family: Norse;
+  src: url("/Users/abhardwaj/Desktop/Odin/Projects/odin_sign-up-form/Norse-Bold (2).otf") format ("opentype");
+}
 
-/* Adjusting the image dimensions */
-  img {
-    width: 100px;
-    height: 120px;
-    padding-left: 150px;
-  }
-  
-/* Taking section 2, turning it into a flex-item that takes up double the space of section 1 */
-  .flex-container .signup {
-    flex:2;
-  }
+/* CSS for the Odin logo image */
+img {
+  width: 100px;
+  height: 120px;
+  padding-top: 150px;
+  padding-left: 100px;
+}
 
-/* Adding padding and such on the initial copy and form so they're properly spaced out */
-  .intro, .form {
-    padding:25px;
-  }
-  
-  .intro {
-    margin: 100px 25px 25px 25px;
-  }
+/* CSS for the odin logo text */
+.odin-text {
+  padding-top: 175px;
+  font-family: Norse;
+  color: white;
+  font-size: 50px;
+}
 
-  .form {
-    margin: 50px 25px 25px 25px;
-  }
+/* Form section of the page. This will contain some text, and then the form itself */
+.form-section {
+  flex: 2;
+  font-family: sans-serif;
+  background-color: rgb(248,248,248);
+}
+
+/* CSS for the intro text. Font-size at 25 and padding to move it down the page more */
+.intro-text {
+  font-size: 25px;
+  padding: 75px 50px 75px 50px;
+}
+
+input, label {
+  display: block;
+}
+
+input {
+  margin-bottom: 25px;
+  padding: 0px 75px 10px 0px;
+  border-radius: 5px;
+  border-color: lightgray;
+}
+
+.form {
+  display: flex;
+  padding: 25px 50px 0px 50px;
+  font-size: 15px;
+  background-color: white;
+  box-shadow: 0px 5px 5px lightgray;
+}
+
+.block1, .block2 {
+  flex: 1;
+}
+
+.block2 {
+  padding-right: 300px;
+}
+
+:required {
+  border: 1px solid red;
+}
+
+.button {
+  padding: 25px 0px 0px 50px;
+}
+
+button {
+  background-color: #596D48;
+  padding: 10px 35px 10px 35px;
+  color: white;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.footer-text {
+  padding: 25px 0px 0px 50px;
+}
+
+strong {
+  color: #596D48
+}

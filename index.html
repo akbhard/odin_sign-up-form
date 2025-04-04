@@ -7,47 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="flex-container">
-        <div class="odin-image">
-            <div class ="odin-logo">
+    <div class="container">
+        <div class="odin-section">
+            <div class="odin-logo">
                 <img src="odin-image.png" alt="Odin Logo">
             </div>
+            <div class="odin-text">
+                <h1>Odin</h1>
+            </div>
         </div>
-        <div class="signup">
-            <div class="intro">
-                <p style="font-size: 25px;">
+        <div class="form-section">
+            <div class="intro-text">
+                <p>
                     This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
                     Sign up <em>now</em> to get started.
                 </p>
-                <p style="font-size: 25px;">
+                <br>
+                <p>
                     You <em>know</em> you want to.
                 </p>
             </div>
-            <div class="form" style="font-size: 25px;">
-                <form>
-                    <p>Let's do this!</p>
-                    <fieldset>
+            <div class="form">
+                <div class="block1">
                         <label for="first_name">First Name</label>
                         <input type="text" id="first_name" name="first_name">
 
-                        <label for="last_name">Last Name</label>
-                        <input type="text" id="last_name" name="last_name">
-                    </fieldset>
-                    <fieldset>
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email">
 
+                        <label for="password">Password</label>
+                        <input type="text" id="password" name="password" required>
+                </div>
+                <div class="block2">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name">
+
+
                         <label for="number">Phone Number</label>
                         <input type="tel" id="number" name="number">
-                    </fieldset>
-                    <fieldset>
-                        <label for="password">Password</label>
-                        <input type="text" id="password" name="password">
 
                         <label for="confirm_password">Confirm Password</label>
-                        <input type="text" id="confirm_password" name="confirm_password">
-                    </fieldset>
-                </form>
+                        <input type="text" id="confirm_password" name="confirm_password" required>
+                </div>
+            </div>
+            <div class="button">
+                <button>Create Account</button>
+            </div>
+            <div class="footer-text">
+                Already have an account? <strong>Log in</strong>
             </div>
         </div>
     </div>
